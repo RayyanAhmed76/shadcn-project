@@ -1,5 +1,23 @@
-import Image from "next/image";
+"use client";
+import Appchart from "@/components/Appchart";
+import Areachart from "@/components/Areachart";
+import Piechart from "@/components/Piechart";
 
 export default function Home() {
-  return <div className="">Homepage</div>;
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-4">
+      <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2">
+        <Appchart />
+      </div>
+      <div className="bg-primary-foreground p-4 rounded-lg ">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg ">
+        <Piechart />
+      </div>
+      <div className="bg-primary-foreground p-4 rounded-lg ">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2 ">
+        <Areachart />
+      </div>
+      <div className="bg-primary-foreground p-4 rounded-lg ">Test</div>
+    </div>
+  );
 }
