@@ -1,7 +1,9 @@
 "use client";
 import Appchart from "@/components/Appchart";
 import Areachart from "@/components/Areachart";
+import CardList from "@/components/CardList";
 import Piechart from "@/components/Piechart";
+import Todolist from "@/components/Todolist";
 
 export default function Home() {
   return (
@@ -9,15 +11,21 @@ export default function Home() {
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2">
         <Appchart />
       </div>
-      <div className="bg-primary-foreground p-4 rounded-lg ">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg ">
+        <CardList title="popularContent" />
+      </div>
       <div className="bg-primary-foreground p-4 rounded-lg ">
         <Piechart />
       </div>
-      <div className="bg-primary-foreground p-4 rounded-lg ">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg ">
+        <Todolist />
+      </div>
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2 ">
         <Areachart />
       </div>
-      <div className="bg-primary-foreground p-4 rounded-lg ">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg ">
+        <CardList title="latestTransactions" />
+      </div>
     </div>
   );
 }
