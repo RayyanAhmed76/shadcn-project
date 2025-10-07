@@ -94,7 +94,7 @@ function CardList({ title }: { title: string }) {
 
   return (
     <div className="">
-      <h1 className="text-medium font-sm mb-6">{title}</h1>
+      <h1 className="text-lg font-medium mb-6">{title}</h1>
       <div className="flex flex-col gap-2">
         {list.map((item) => (
           <Card
