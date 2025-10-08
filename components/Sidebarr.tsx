@@ -9,6 +9,7 @@ import {
   Projector,
   Search,
   Settings,
+  User,
   User2,
 } from "lucide-react";
 import {
@@ -41,12 +42,19 @@ import {
   CollapsibleTrigger,
 } from "./ui/collapsible";
 
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+
 function Sidebarr() {
   const items = [
     {
       title: "Home",
-      url: "#",
+      url: "/",
       icon: Home,
+    },
+    {
+      title: "User",
+      url: "/user/rayyan",
+      icon: User,
     },
     {
       title: "Inbox",
@@ -76,7 +84,10 @@ function Sidebarr() {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href={"/"}>
-                <Image src="/logo.svg" alt="logo" width={20} height={20} />
+                <Avatar>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
                 <span>Shadcn</span>
               </Link>
             </SidebarMenuButton>

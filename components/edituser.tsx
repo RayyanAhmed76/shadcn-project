@@ -55,7 +55,7 @@ function Edituser() {
     <SheetContent>
       <SheetHeader>
         <SheetTitle>Edit user profile</SheetTitle>
-        <SheetDescription>
+        <SheetDescription asChild>
           <Form {...form}>
             <form className="space-y-8">
               <FormField
@@ -118,7 +118,7 @@ function Edituser() {
               />
               <Select>
                 <SelectTrigger>
-                  <SelectValue />
+                  <SelectValue placeholder={"role"} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="admin">ADMIN</SelectItem>

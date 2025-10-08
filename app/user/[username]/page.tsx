@@ -1,5 +1,7 @@
+import Applinechart from "@/components/Applinechart";
 import CardList from "@/components/CardList";
 import Edituser from "@/components/edituser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -151,8 +153,25 @@ function SingleUserpage() {
 
         {/* RIGHT COLUMN */}
         <div className="flex flex-col gap-6 w-full md:w-2/3">
-          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
-          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <div className="flex items-center gap-4 mb-5">
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <h1 className="font-medium text-lg">Rayyan Ahmed</h1>
+            </div>
+            <p className="text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
+              vero pariatur temporibus, error totam iure doloribus distinctio
+              odit deleniti facere, dolorem, repellat atque eum. Repellendus
+              molestias culpa iste harum quas?
+            </p>
+          </div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="font-medium text-lg mb-4">Line Chart</h1>
+            <Applinechart />
+          </div>
         </div>
       </div>
     </div>

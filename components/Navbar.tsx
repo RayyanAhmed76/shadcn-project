@@ -18,7 +18,7 @@ import { SidebarTrigger } from "./ui/sidebar";
 function Navbar() {
   const { themes, setTheme } = useTheme();
   return (
-    <nav className="p-4 flex justify-between items-center">
+    <nav className="p-4 flex justify-between items-center sticky top-0 z-10 bg-background">
       {/*left*/}
       <SidebarTrigger />
       {/*right*/}
